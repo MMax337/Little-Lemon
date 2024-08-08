@@ -1,0 +1,69 @@
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin: 16px;
+  text-align: center;
+  background-color: #edefee;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  font-family: 'Karla';
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Slightly enlarge the card */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance the shadow for depth effect */
+}
+
+.card .info-div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card>img {
+  width: 100%;
+  height: 200px;
+  border-radius: 8px 8px 0 0; /* Ensures rounded corners only on the top */
+  display: block; /* Removes any extra space below the image */
+}
+
+.card-info {
+  padding: 8%;
+  flex: 1;
+  height: 200px;
+}
+
+.name, .price {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.price {
+  color: #ee9972;
+  font-weight: 600;
+}
+
+.description {
+  text-align: justify;
+  max-width: 65ch;
+  color: black;
+  font-size: 16px;
+  line-height: 1.5;
+  overflow: auto;
+}
+
+.delivery-container {
+  padding-left: 8%;
+  padding-bottom: 5%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.delivery-img {
+  width: 20px;
+  height: auto;
+}
+
+
+
