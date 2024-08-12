@@ -1,37 +1,44 @@
 import Logo from '../assets/big_logo.png'
 import './Footer.css'
+import NavList from './NavList'
+import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {
   return (
     <footer>
       <img src={Logo} alt='logo'></img>
       <section>
-        <h3>Document Navigation</h3>
+        <h3>Little Lemon</h3>
         <nav className='footer-nav'>
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/menu">Menu</a></li>
-            <li><a href="/reservartions">Reservartions</a></li>
-            <li><a href="/order">Order Online</a></li>
-            <li><a href="/login">Login</a></li>
-          </ul>
+        <NavList />
         </nav>
+      </section>
+      <section>
+        <h3>Find Us in Social Media</h3>
+        <ul className='social-media-list'>
+          <li>
+            <a href='https://facebook.com' target='_blank' rel='noopener noreferrer'>
+              <FaFacebookF />
+            </a>
+          </li>
+          <li>
+            <a href='https://twitter.com' target='_blank' rel='noopener noreferrer'>
+              <FaTwitter />
+            </a>
+          </li>
+          <li>
+            <a href='https://instagram.com' target='_blank' rel='noopener noreferrer'>
+              <FaInstagram />
+            </a>
+          </li>
+        </ul>
       </section>
       <section>
         <h3>Contact</h3>
         <ul>
-          <li>Address</li>
-          <li>Phone Number</li>
-          <li>Email</li>
-        </ul>
-      </section>
-      <section>
-        <h3>Social Media links</h3>
-        <ul>
-          <li>Address</li>
-          <li>Phone Number</li>
-          <li>Email</li>
+          <li>Chicago</li>
+          <li>123456789</li>
+          <li>sample_email@gmail.com</li>
         </ul>
       </section>
     </footer>

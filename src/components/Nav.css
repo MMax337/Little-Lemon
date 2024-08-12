@@ -20,6 +20,12 @@
   display: inline-block;
   padding: 1em;
   font-size: 24px;
+  transition: transform 0.3s ease;
+}
+
+.top-nav ul li:hover {
+  transform: scale(1.1);
+
 }
 
 .top-nav ul li a {
@@ -28,6 +34,7 @@
   text-decoration: none;
 }
 
+
 .top-nav ul li a:hover {
-  text-decoration: underline;
+  color: #b0b0b0;
 }

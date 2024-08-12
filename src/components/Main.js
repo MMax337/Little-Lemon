@@ -1,46 +1,52 @@
-import './Main.css'
-import DishCard from './DishCard'
+import Homepage from './Homepage'
+import BookingPage from './BookingPage';
+import { useState, useReducer } from 'react';
+import { Routes, Route, useNavigate } from "react-router-dom";
 
-import greek_salad from '../assets/greek salad.jpg'
-import bruchetta from '../assets/bruchetta.svg'
-import lemon_desert from '../assets/lemon dessert.jpg'
+import { fetchAPI, submitAPI } from '../fetchScript';
+import ConfirmedBooking from './ConfirmedBooking';
 
+export const initializeTimes = () => fetchAPI(new Date());
 
-const dishes = [
-  {
-    name: "Greek salad",
-    price: 12.99,
-    description: "The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.",
-    image: greek_salad,
-  },
-  {
-    name: "Bruchetta",
-    price: 5.99,
-    description: "Our Bruchetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil.",
-    image: bruchetta,
-  },
-  {
-    name: "Lemon Dessert",
-    price: 5.00,
-    description: "This comes straight from grandma's recipe book, every last ingredient has been sourced and is as authentic as can be imagined.",
-    image: lemon_desert,
+export const updateTimes = (times, action) => {
+  switch(action.type) {
+    case 'selectedDay': // the selected day from user, fetch the Data
+      return fetchAPI(action.payload);
+    default:
+      return times;
   }
-];
+}
+
+
 
 const Main = () => {
+  const [availableTimes, dispatchAvailableTimes] = useReducer(updateTimes, initializeTimes());
+  const [bookingInfromation, setBookingInfromation] = useState({});
+  const navigate = useNavigate();
+  const submitForm = (formData) => {
+    console.log("data", formData);
+    if(submitAPI(formData)) {
+      setBookingInfromation(formData);
+      navigate('/confirmation')
+    }
+  }
   return (
     <main>
-      <div className='main-info'>
-        <h1>This weeks specials!</h1>
-        <button className="btn-menu">Online Menu</button>
-      </div>
-      <div className="menu">
-      {
-        dishes.map(dish => (<DishCard key={dish.name} dish={dish}></DishCard>))
-      }
-      </div>
+      <Routes>
+      <Route path="/" element={<Homepage />}></Route>
+      <Route path="/menu" element={<Homepage />}></Route>
+      <Route path="/booking" element={<BookingPage
+        bookingTimes={{availableTimes, dispatchAvailableTimes}}
+        submitForm={submitForm}
+      />}>
+      </Route>
+      <Route path='/confirmation' element={<ConfirmedBooking booking={bookingInfromation}/>}></Route>
+      <Route path="/order" element={<Homepage />}></Route>
+      <Route path="/login" element={<Homepage />}></Route>
+    </Routes>
     </main>
   )
+
 }
 
 export default Main;

@@ -1,4 +1,5 @@
 import logo from '../assets/Logo.svg'
+import NavList from './NavList'
 import './Nav.css'
 
 
@@ -8,14 +9,7 @@ const Nav = () => {
       <a href='/'>
         <img src={logo} alt='logo'></img>
       </a>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/menu">Menu</a></li>
-        <li><a href="/reservartions">Reservartions</a></li>
-        <li><a href="/order">Order Online</a></li>
-        <li><a href="/login">Login</a></li>
-      </ul>
+      <NavList />
     </nav>
   )
 }

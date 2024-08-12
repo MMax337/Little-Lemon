@@ -5,7 +5,8 @@
   font-family: 'Markazi Text', sans-serif;
   padding: 20px;
   width: 100%;
-  background-color: #495e57;
+  background-color: var(--dark-primary-color);
+  box-sizing: border-box;
 }
 
 .header-container-info {
@@ -13,7 +14,7 @@
 }
 
 .header-title {
-  color: #F4CE14;
+  color: var(--secondary-color);
   font-size: 64px;
   font-weight: 600;
   line-height: 1.2;
@@ -38,8 +39,8 @@
 }
 
 .header-reserve-btn {
-  color: black;
-  background-color: #F4CE14;
+  color: var(--dark-primary-color);
+  background-color: var(--secondary-color);
   border-radius: 15px;
   font-size: 24px;
   padding: 10px;
@@ -47,8 +48,13 @@
   cursor: pointer;
 }
 
-.reserve-btn:active {
+.header-reserve-btn:active {
   background-color: #e3bf00;
+}
+
+.header-reserve-btn:hover {
+  color: white;
+  background-color: #f4cf14ba;
 }
 
 .img-container {

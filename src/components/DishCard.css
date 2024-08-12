@@ -34,6 +34,7 @@
 }
 
 .name, .price {
+  /* color: var(--dark-primary-color); */
   font-size: 24px;
   font-weight: bold;
 }
@@ -54,15 +55,22 @@
 
 .delivery-container {
   padding-left: 8%;
+  font-size: 20px;
   padding-bottom: 5%;
   display: flex;
   align-items: center;
   gap: 8px;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.delivery-container:hover {
+  transform: scale(1.05); /* Slightly enlarge the container */
+  color: #ff5722; /* Bright orange text */
 }
 
 .delivery-img {
-  width: 20px;
-  height: auto;
+  height: 20px;
+  width: auto;
 }
 
 
