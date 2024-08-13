@@ -1,5 +1,5 @@
 import './Header.css'
-import food from '../assets/restauranfood_zoomed.jpg'
+import food from '../../assets/restauranfood_zoomed.jpg'
 
 
 const Header = () => {

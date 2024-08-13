@@ -1,7 +1,7 @@
-import Header from './Header'
-import Menu from './Menu'
-import About from './About'
-import Testimonials from './Testimonials'
+import Header from './Header/Header'
+import Menu from './Menu/Menu'
+import About from './About/About'
+import Testimonials from './Testimonials/Testimonials'
 
 
 

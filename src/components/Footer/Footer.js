@@ -1,6 +1,6 @@
-import Logo from '../assets/big_logo.png'
+import Logo from '../../assets/big_logo.png'
 import './Footer.css'
-import NavList from './NavList'
+import NavList from '../Nav/NavList'
 import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {

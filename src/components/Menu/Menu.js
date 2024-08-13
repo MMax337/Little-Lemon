@@ -1,9 +1,9 @@
 import './Menu.css'
-import DishCard from './DishCard'
+import DishCard from '../DishCard/DishCard'
 
-import greek_salad from '../assets/greek salad.jpg'
-import bruchetta from '../assets/bruchetta.svg'
-import lemon_desert from '../assets/lemon dessert.jpg'
+import greek_salad from '../../assets/greek salad.jpg'
+import bruchetta from '../../assets/bruchetta.svg'
+import lemon_desert from '../../assets/lemon dessert.jpg'
 
 
 const dishes = [

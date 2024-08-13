@@ -1,8 +1,8 @@
 
-import testimonial1 from '../assets/testemonial1.jpg'
-import testimonial2 from '../assets/testimonial2.jpg'
-import testimonial3 from '../assets/testemonial3.jpg'
-import testimonial4 from '../assets/testimonial4.jpg'
+import testimonial1 from '../../assets/testemonial1.jpg'
+import testimonial2 from '../../assets/testimonial2.jpg'
+import testimonial3 from '../../assets/testemonial3.jpg'
+import testimonial4 from '../../assets/testimonial4.jpg'
 
 import TestimonialSlide from './TestimonialSlide'
 import { Swiper, SwiperSlide } from 'swiper/react';

@@ -4,7 +4,7 @@ import { useState, useReducer } from 'react';
 import { Routes, Route, useNavigate } from "react-router-dom";
 
 import { fetchAPI, submitAPI } from '../fetchScript';
-import ConfirmedBooking from './ConfirmedBooking';
+import ConfirmedBooking from './ConfirmedBooking/ConfirmedBooking';
 
 export const initializeTimes = () => fetchAPI(new Date());
 

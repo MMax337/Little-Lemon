@@ -1,5 +1,5 @@
 import './DishCard.css'
-import delivery from '../assets/delivery.png'
+import delivery from '../../assets/delivery.png'
 
 const DishCard = ({dish}) => {
   const {name, price, image, description} = dish;
