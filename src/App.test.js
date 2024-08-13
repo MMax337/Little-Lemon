@@ -12,7 +12,7 @@ jest.mock('swiper/modules', () => ({
 jest.mock('swiper/css', () => jest.fn());
 
 import { render, screen, fireEvent, waitFor} from '@testing-library/react';
-import BookingForm from './components/BookingForm';
+import BookingForm from './components/BookingForm/BookingForm';
 import { initializeTimes, updateTimes } from './components/Main';
 
 
