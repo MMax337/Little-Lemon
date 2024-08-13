@@ -64,7 +64,7 @@
 .food-img {
   position: absolute;
   top: 10%;
-  right: 15vw;
+  right: 11%;
   height: 110%;
   border-radius: 15px;
   object-fit: cover;
@@ -80,13 +80,17 @@ If top:10% and height:110% it breaks the div by 20%.
 }
 
 
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
   .header-container {
+    display: flex;
     justify-content: space-between;
     padding: 10px;
   }
+  .header-container-info {
+    padding-left: 20px;
+  }
   .food-img {
-    right: 10vw;
+    right: 9%;
   }
 }
 
@@ -95,13 +99,14 @@ If top:10% and height:110% it breaks the div by 20%.
     justify-content: space-between;
     padding: 10px;
   }
+
   .food-img {
-    right: 10vw;
-    width: 300px;
+    right: 7%;
+    width: 250px;
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .header-container {
     flex-direction: column;
     align-items: center;
@@ -114,6 +119,7 @@ If top:10% and height:110% it breaks the div by 20%.
   }
 
   .food-img {
+    /* display: none; */
     position: static; /* Remove absolute positioning */
     width: 100%; /* Full width of the container */
     height: 400px;

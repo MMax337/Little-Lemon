@@ -27,7 +27,7 @@
 
 .about-images {
   flex: 1;
-  width: 50vw;
+  object-fit: cover;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(4, 60px);
@@ -48,7 +48,7 @@
 }
 
 .about-images img:nth-of-type(2) {
-  grid-row: 4/2;
+  grid-row: 2/5;
   grid-column: 2;
 }
 
